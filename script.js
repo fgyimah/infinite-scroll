@@ -1,4 +1,5 @@
 const imageContainer = document.getElementById('image-container');
+const loader = document.getElementById('loader');
 const count = 10;
 const apiKey =
   'ab689f2a7986ac06dd53a55821d6d0ccb271bfc5ec48f85b2a88998da84fe367';
@@ -12,6 +13,7 @@ function loadImages() {
   loadCount++;
   if (loadCount === totalImages) {
     ready = true;
+    loader.hidden = true;
   }
 }
 
